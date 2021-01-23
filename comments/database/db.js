@@ -1,0 +1,15 @@
+const mongoose = require("mongoose");
+const config = require("config");
+
+const connectDB = async () => {
+  try {
+    await mongoose.connect(config.get("mongoURL"), {
+      useFindAndModify: true,
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
+    console.log("MongoDB connected!");
+  } catch (error) {
+    console.log(error.message);
+  }
+};
