@@ -1,0 +1,3 @@
+{
+    "mongoURL": "mongodb+srv://olabisi1234:olabisi1234@postsservice.xa6vq.mongodb.net/postsService?retryWrites=true&w=majority"
+}
