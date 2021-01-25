@@ -1,9 +1,11 @@
 const express = require("express");
-const routes = require("./routes/postsRoutes");
-const connectDB = require("./database/db");
-connectDB();
 
 const app = express();
+
+const connectDB = require("./database/db");
+connectDB();
+const routes = require("./routes/postsRoutes");
+
 const PORT = 3001;
 
 app.use(express.json());

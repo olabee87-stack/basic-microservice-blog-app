@@ -6,8 +6,8 @@ exports.createComment = async (req, res) => {
 
   try {
     await comment.save();
-    res.status(201).json({ comment });
-    console.log("New comment created");
+    res.status(201).send(comment);
+    console.log("New comment created: ", comment);
   } catch (error) {
     return res.status(500).json({ Error: error.message });
   }

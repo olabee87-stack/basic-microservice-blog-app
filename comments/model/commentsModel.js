@@ -1,10 +1,12 @@
 const mongoose = require("mongoose");
 
 const commentsSchema = {
-  title: {
-    type: String,
-    required: true,
-  },
+  content: [
+    {
+      type: String,
+      required: true,
+    },
+  ],
 };
 
 const Comments = mongoose.model("Comments", commentsSchema);
